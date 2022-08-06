@@ -15,14 +15,14 @@ class PlaceFinder {
       return;
     }
     navigator.geolocation.getCurrentPosition(
-      successResult => {
+      (successResult) => {
         const coordinates = {
           lat: successResult.coords.latitude + Math.random() * 50,
           lng: successResult.coords.longitude + Math.random() * 50,
         };
         console.log(coordinates);
       },
-      error => {
+      (error) => {
         alert(
           'Could not locate you unfortunately. Please enter an address manually!'
         );
